@@ -1,12 +1,16 @@
 import React from 'react';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavBar from './components/NavBar';
 
-function App() {
-  return (
-    <div className="App">
+
+const App = () => (
+  <div className="App">
+    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
       <NavBar />
-    </div>
-  );
-}
+    </MuiThemeProvider>
+  </div>
+);
 
 export default App;
