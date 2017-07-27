@@ -1,21 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Row, Col } from 'react-flexbox-grid';
 
-const Home = ({ name }) => {
-  const pa = `${name}pa`;
+const Home = () => {
+  const style = {
+    color: 'white',
+    textAlign: 'center',
+    height: '50%',
+    width: '100%',
+  };
   return (
-    <div>
-      <div> {pa}Projects </div>
-      <div> software engineer </div>
-    </div>
+    <Row style={style} middle="xs">
+      <Col xs={10} md={10} lg={10} >
+        <div style={{ fontSize: '72px' }}>
+          jesse huang
+        </div>
+        <div style={{ fontSize: '32px' }}>
+          software engineer
+        </div>
+      </Col>
+    </Row>
   );
 };
-Home.propTypes = {
-  name: PropTypes.string,
-};
-Home.defaultProps = {
-  name: 'Default name',
-};
-
 
 export default Home;
