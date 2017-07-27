@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { withRouter, Route, Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Divider from 'material-ui/Divider';
 import { List, ListItem } from 'material-ui/List';
@@ -21,9 +18,28 @@ import Roof from '../images/jiuzhaigouroof.jpg';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    let initBg;
+    let initDark;
+    switch (this.props.location.pathname) {
+      case '/about':
+        initBg = Roof;
+        initDark = 0;
+        break;
+      case '/projects':
+        initBg = Lake;
+        initDark = 0;
+        break;
+      case '/contact':
+        initBg = Bio;
+        initDark = 0.6;
+        break;
+      default:
+        initBg = GrandSlam;
+        initDark = 0.3;
+    }
     this.state = {
-      backgroundUrl: GrandSlam,
-      backgroundDarkness: 0.3,
+      backgroundUrl: initBg,
+      backgroundDarkness: initDark,
     };
   }
   render() {
@@ -43,66 +59,67 @@ class NavBar extends React.Component {
     };
     return (
       <div>
-        <Router>
-          <div>
-            <Grid fluid style={gridStyle}>
-              <Row>
-                <Col xs={3} md={3} lg={2} >
-                  <Paper style={paperStyle}>
-                    <List>
-                      <ListItem
-                        primaryText="Home"
-                        onTouchTap={() => {
-                          this.setState({ backgroundUrl: GrandSlam });
-                          this.setState({ backgroundDarkness: 0.3 });
-                        }}
-                        containerElement={<Link to="/" />}
-                      />
-                      <Divider />
-                      <ListItem
-                        primaryText="About"
-                        onTouchTap={() => {
-                          this.setState({ backgroundUrl: Roof });
-                          this.setState({ backgroundDarkness: 0 });
-                        }}
-                        containerElement={<Link to="/about" />}
-                      />
-                      <Divider />
-                      <ListItem
-                        primaryText="Projects"
-                        onTouchTap={() => {
-                          this.setState({ backgroundUrl: Lake });
-                          this.setState({ backgroundDarkness: 0 });
-                        }}
-                        containerElement={<Link to="/projects" />}
-                      />
-                      <Divider />
-                      <ListItem
-                        primaryText="Contact"
-                        onTouchTap={() => {
-                          this.setState({ backgroundUrl: Bio });
-                          this.setState({ backgroundDarkness: 0.6 });
-                        }}
-                        containerElement={<Link to="/contact" />}
-                      />
-                    </List>
-                  </Paper>
-                </Col>
-                <Col xs={9} md={9}>
-                  <Route exact path="/" component={Home} />
-                  <Route
-                    path="/about"
-                    component={About}
+        <Grid fluid style={gridStyle}>
+          <Row>
+            <Col xs={3} md={3} lg={2} >
+              <Paper style={paperStyle}>
+                <List>
+                  <ListItem
+                    primaryText="Home"
+                    onTouchTap={() => {
+                      this.setState({ backgroundUrl: GrandSlam });
+                      this.setState({ backgroundDarkness: 0.3 });
+                    }}
+                    containerElement={<Link to="/" />}
                   />
-                  <Route path="/projects" component={Projects} />
-                  <Route path="/contact" component={Contact} />
-                </Col>
-              </Row>
-            </Grid>
-          </div>
-        </Router>
+                  <Divider />
+                  <ListItem
+                    primaryText="About"
+                    onTouchTap={() => {
+                      this.setState({ backgroundUrl: Roof });
+                      this.setState({ backgroundDarkness: 0 });
+                    }}
+                    containerElement={<Link to="/about" />}
+                  />
+                  <Divider />
+                  <ListItem
+                    primaryText="Projects"
+                    onTouchTap={() => {
+                      this.setState({ backgroundUrl: Lake });
+                      this.setState({ backgroundDarkness: 0 });
+                    }}
+                    containerElement={<Link to="/projects" />}
+                  />
+                  <Divider />
+                  <ListItem
+                    primaryText="Contact"
+                    onTouchTap={() => {
+                      this.setState({ backgroundUrl: Bio });
+                      this.setState({ backgroundDarkness: 0.6 });
+                    }}
+                    containerElement={<Link to="/contact" />}
+                  />
+                </List>
+              </Paper>
+            </Col>
+            <Col xs={9} md={9}>
+              <Route exact path="/" component={Home} />
+              <Route
+                path="/about"
+                component={About}
+              />
+              <Route path="/projects" component={Projects} />
+              <Route path="/contact" component={Contact} />
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
 }
-export default NavBar;
+NavBar.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
+};
+export default withRouter(NavBar);
