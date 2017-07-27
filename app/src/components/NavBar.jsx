@@ -9,47 +9,41 @@ import Home from '../scenes/Home';
 import About from '../scenes/About';
 import Projects from '../scenes/Projects';
 import Contact from '../scenes/Contact';
-import GrandSlam from '../images/grand_slam.jpg';
-import Bio from '../images/bio.jpg';
-// import WaterTree from '../images/jiuzhaigoutree.jpg';
-import Lake from '../images/jiuzhaigoulake.jpg';
-import Roof from '../images/jiuzhaigouroof.jpg';
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    const bgs = this.props.backgrounds;
     let initBg;
-    let initDark;
     switch (this.props.location.pathname) {
       case '/about':
-        initBg = Roof;
-        initDark = 0;
+        initBg = bgs.about;
         break;
       case '/projects':
-        initBg = Lake;
-        initDark = 0;
+        initBg = bgs.projects;
         break;
       case '/contact':
-        initBg = Bio;
-        initDark = 0.6;
+        initBg = bgs.contact;
         break;
       default:
-        initBg = GrandSlam;
-        initDark = 0.3;
+        initBg = bgs.home;
     }
     this.state = {
-      backgroundUrl: initBg,
-      backgroundDarkness: initDark,
+      background: {
+        url: initBg.url,
+        darkness: initBg.darkness,
+      },
     };
   }
   render() {
+    const bgs = this.props.backgrounds;
     const gridStyle = {
       paddingLeft: '0rem',
       paddingRight: '0rem',
       backgroundImage: `linear-gradient(
-        rgba(0,0,0,${this.state.backgroundDarkness}),
-        rgba(0,0,0,${this.state.backgroundDarkness})),
-        url(${this.state.backgroundUrl})`,
+        rgba(0,0,0,${this.state.background.darkness}),
+        rgba(0,0,0,${this.state.background.darkness})),
+        url(${this.state.background.url})`,
       backgroundSize: '100% 100%',
       backgroundRepeat: 'no-repeat',
     };
@@ -67,8 +61,7 @@ class NavBar extends React.Component {
                   <ListItem
                     primaryText="Home"
                     onTouchTap={() => {
-                      this.setState({ backgroundUrl: GrandSlam });
-                      this.setState({ backgroundDarkness: 0.3 });
+                      this.setState({ background: bgs.home });
                     }}
                     containerElement={<Link to="/" />}
                   />
@@ -76,8 +69,7 @@ class NavBar extends React.Component {
                   <ListItem
                     primaryText="About"
                     onTouchTap={() => {
-                      this.setState({ backgroundUrl: Roof });
-                      this.setState({ backgroundDarkness: 0 });
+                      this.setState({ background: bgs.about });
                     }}
                     containerElement={<Link to="/about" />}
                   />
@@ -85,8 +77,7 @@ class NavBar extends React.Component {
                   <ListItem
                     primaryText="Projects"
                     onTouchTap={() => {
-                      this.setState({ backgroundUrl: Lake });
-                      this.setState({ backgroundDarkness: 0 });
+                      this.setState({ background: bgs.projects });
                     }}
                     containerElement={<Link to="/projects" />}
                   />
@@ -94,15 +85,14 @@ class NavBar extends React.Component {
                   <ListItem
                     primaryText="Contact"
                     onTouchTap={() => {
-                      this.setState({ backgroundUrl: Bio });
-                      this.setState({ backgroundDarkness: 0.6 });
+                      this.setState({ background: bgs.contact });
                     }}
                     containerElement={<Link to="/contact" />}
                   />
                 </List>
               </Paper>
             </Col>
-            <Col xs={9} md={9}>
+            <Col xs={9} md={9} lg={10}>
               <Route exact path="/" component={Home} />
               <Route
                 path="/about"
@@ -120,6 +110,24 @@ class NavBar extends React.Component {
 NavBar.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string,
+  }).isRequired,
+  backgrounds: PropTypes.shape({
+    home: PropTypes.shape({
+      url: PropTypes.string,
+      darkness: PropTypes.number,
+    }),
+    projects: PropTypes.shape({
+      url: PropTypes.string,
+      darkness: PropTypes.number,
+    }),
+    contact: PropTypes.shape({
+      url: PropTypes.string,
+      darkness: PropTypes.number,
+    }),
+    about: PropTypes.shape({
+      url: PropTypes.string,
+      darkness: PropTypes.number,
+    }),
   }).isRequired,
 };
 export default withRouter(NavBar);
