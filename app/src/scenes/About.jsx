@@ -15,6 +15,7 @@ const About = () => (
       During my time at WashU, I have a become proficient programmer, picking up various
       technologies along the way. I build things, and I do it well. I&#39;m very grateful
       for this experience, and I need to use it to better the lives of other people.
+
       At Washington University, I have learned from professors and peers alike.
       I value the stories of people around me just as much as I do the
       web frameworks and algorithms I learn.

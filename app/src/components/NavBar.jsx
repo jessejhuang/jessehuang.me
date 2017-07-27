@@ -11,9 +11,12 @@ import Paper from 'material-ui/Paper';
 import Home from '../scenes/Home';
 import About from '../scenes/About';
 import Projects from '../scenes/Projects';
+import Contact from '../scenes/Contact';
 import GrandSlam from '../images/grand_slam.jpg';
 import Bio from '../images/bio.jpg';
-import Typing from '../images/typing.png';
+// import WaterTree from '../images/jiuzhaigoutree.jpg';
+import Lake from '../images/jiuzhaigoulake.jpg';
+import Roof from '../images/jiuzhaigouroof.jpg';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -53,27 +56,35 @@ class NavBar extends React.Component {
                           this.setState({ backgroundUrl: GrandSlam });
                           this.setState({ backgroundDarkness: 0.3 });
                         }}
-                        containerElement={<Link to="/">Home</Link>}
+                        containerElement={<Link to="/" />}
                       />
                       <Divider />
                       <ListItem
                         primaryText="About"
                         onTouchTap={() => {
-                          this.setState({ backgroundUrl: Bio });
-                          this.setState({ backgroundDarkness: 0.8 });
+                          this.setState({ backgroundUrl: Roof });
+                          this.setState({ backgroundDarkness: 0 });
                         }}
-                        containerElement={<Link to="/about">About</Link>}
+                        containerElement={<Link to="/about" />}
                       />
                       <Divider />
                       <ListItem
                         primaryText="Projects"
                         onTouchTap={() => {
-                          this.setState({ backgroundUrl: Typing });
-                          this.setState({ backgroundDarkness: 0.9 });
+                          this.setState({ backgroundUrl: Lake });
+                          this.setState({ backgroundDarkness: 0 });
                         }}
-                        containerElement={<Link to="/projects">Projects</Link>}
+                        containerElement={<Link to="/projects" />}
                       />
                       <Divider />
+                      <ListItem
+                        primaryText="Contact"
+                        onTouchTap={() => {
+                          this.setState({ backgroundUrl: Bio });
+                          this.setState({ backgroundDarkness: 0.6 });
+                        }}
+                        containerElement={<Link to="/contact" />}
+                      />
                     </List>
                   </Paper>
                 </Col>
@@ -84,6 +95,7 @@ class NavBar extends React.Component {
                     component={About}
                   />
                   <Route path="/projects" component={Projects} />
+                  <Route path="/contact" component={Contact} />
                 </Col>
               </Row>
             </Grid>
