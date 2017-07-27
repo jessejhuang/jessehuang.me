@@ -1,7 +1,7 @@
 import GrandSlam from '../images/grand_slam.jpg';
 import Bio from '../images/bio.jpg';
 import Lake from '../images/jiuzhaigoulake.jpg';
-import Roof from '../images/jiuzhaigouroof.jpg';
+import Code from '../images/code_screenshot.png';
 
 const backgrounds = {
   home: {
@@ -9,8 +9,12 @@ const backgrounds = {
     darkness: 0.3,
   },
   about: {
-    url: Roof,
-    darkness: 0,
+    url: Code,
+    darkness: 0.8,
+  },
+  experience: {
+    url: Code,
+    darkness: 0.8,
   },
   projects: {
     url: Lake,
@@ -18,7 +22,7 @@ const backgrounds = {
   },
   contact: {
     url: Bio,
-    darkness: 0.6,
+    darkness: 0.7,
   },
 };
 

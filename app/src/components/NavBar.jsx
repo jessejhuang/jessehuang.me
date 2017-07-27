@@ -9,6 +9,7 @@ import Home from '../scenes/Home';
 import About from '../scenes/About';
 import Projects from '../scenes/Projects';
 import Contact from '../scenes/Contact';
+import Experience from '../scenes/Experience';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -25,6 +26,9 @@ class NavBar extends React.Component {
       case '/contact':
         initBg = bgs.contact;
         break;
+      case '/experience':
+        initBg = bgs.experience;
+        break;
       default:
         initBg = bgs.home;
     }
@@ -40,15 +44,20 @@ class NavBar extends React.Component {
     const gridStyle = {
       paddingLeft: '0rem',
       paddingRight: '0rem',
+      width: '100%',
       backgroundImage: `linear-gradient(
         rgba(0,0,0,${this.state.background.darkness}),
         rgba(0,0,0,${this.state.background.darkness})),
         url(${this.state.background.url})`,
       backgroundSize: '100% 100%',
       backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      height: 'auto',
+      minHeight: '100vh',
     };
     const paperStyle = {
-      height: '100vh',
+      height: 'auto',
+      minHeight: '100vh',
       backgroundColor: 'rgba(48,48,48,0.2)',
     };
     return (
@@ -75,6 +84,14 @@ class NavBar extends React.Component {
                   />
                   <Divider />
                   <ListItem
+                    primaryText="Experience"
+                    onTouchTap={() => {
+                      this.setState({ background: bgs.experience });
+                    }}
+                    containerElement={<Link to="/experience" />}
+                  />
+                  <Divider />
+                  <ListItem
                     primaryText="Projects"
                     onTouchTap={() => {
                       this.setState({ background: bgs.projects });
@@ -92,7 +109,7 @@ class NavBar extends React.Component {
                 </List>
               </Paper>
             </Col>
-            <Col xs={9} md={9} lg={10}>
+            <Col style={{ minHeight: '100vh', height: '100%' }} xs={9} md={9} lg={10}>
               <Route exact path="/" component={Home} />
               <Route
                 path="/about"
@@ -100,6 +117,7 @@ class NavBar extends React.Component {
               />
               <Route path="/projects" component={Projects} />
               <Route path="/contact" component={Contact} />
+              <Route path="/experience" component={Experience} />
             </Col>
           </Row>
         </Grid>
@@ -125,6 +143,10 @@ NavBar.propTypes = {
       darkness: PropTypes.number,
     }),
     about: PropTypes.shape({
+      url: PropTypes.string,
+      darkness: PropTypes.number,
+    }),
+    experience: PropTypes.shape({
       url: PropTypes.string,
       darkness: PropTypes.number,
     }),
