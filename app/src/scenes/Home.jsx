@@ -3,13 +3,12 @@ import { Row, Col } from 'react-flexbox-grid';
 
 const Home = () => {
   const style = {
-    color: 'white',
-    textAlign: 'center',
-    height: '50%',
+    marginTop: '10%',
+    height: 'auto%',
     width: '100%',
   };
   return (
-    <Row style={style} middle="xs">
+    <Row style={style} center="xs" middle="xs">
       <Col xs={10} md={10} lg={10} >
         <div style={{ fontSize: '72px' }}>
           jesse huang
