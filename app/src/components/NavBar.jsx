@@ -54,11 +54,12 @@ class NavBar extends React.Component {
       backgroundAttachment: 'fixed',
       height: 'auto',
       minHeight: '100vh',
+      color: '#CCCCCC',
     };
     const paperStyle = {
-      height: 'auto',
+      height: '100%',
       minHeight: '100vh',
-      backgroundColor: 'rgba(48,48,48,0.2)',
+      backgroundColor: 'rgba(48,48,48,0.5)',
     };
     return (
       <div>

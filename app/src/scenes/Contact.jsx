@@ -4,7 +4,6 @@ import Divider from 'material-ui/Divider';
 
 const Contact = () => {
   const style = {
-    color: 'floralwhite',
     textAlign: 'center',
     height: '100%',
     width: '100%',
@@ -13,6 +12,7 @@ const Contact = () => {
     fontSize: '32px',
     textAlign: 'center',
     height: '60%',
+    paddingTop: '10%',
   };
   return (
     <Row style={style}>

@@ -4,7 +4,6 @@ import { Row, Col } from 'react-flexbox-grid';
 const Home = () => {
   const style = {
     marginTop: '10%',
-    color: 'white',
     height: 'auto%',
     width: '100%',
   };

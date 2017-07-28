@@ -4,7 +4,7 @@ import Divider from 'material-ui/Divider';
 
 const About = () => {
   const style = {
-    color: 'floralwhite',
+    color: '#CCCCCC',
     textAlign: 'center',
     height: '100%',
     width: '100%',

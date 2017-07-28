@@ -1,11 +1,14 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
+import { List } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
+import Paper from 'material-ui/Paper';
 import { langs, frameworks, databases, deployment } from '../constants/skills';
+import WorkInfo from '../components/WorkInfo';
+import workExperience from '../constants/workExp';
 
 const Experience = () => {
   const style = {
-    color: 'floralwhite',
     textAlign: 'center',
     height: '100%',
     width: '100%',
@@ -18,8 +21,6 @@ const Experience = () => {
     marginTop: '2rem',
   };
   const subhead = {
-    color: 'floralwhite',
-    backgroundColor: 'rgba(0,0,0,0)',
     marginTop: '3rem',
     fontSize: '40px',
     textAlign: 'center',
@@ -70,7 +71,14 @@ const Experience = () => {
             </Row>
             <Row middle="xs">
               <Col xs={12} md={12} lg={12} style={subhead} >
-                Professional Experience
+                <Paper style={{ paddingTop: '4%', color: '#CCCCCC', backgroundColor: 'rgb(48,48,48)' }}>
+                  Professional Experience
+                  <List>
+                    {workExperience.map(job => (
+                      <WorkInfo job={job} />
+                    ))}
+                  </List>
+                </Paper>
               </Col>
             </Row>
           </Col>
