@@ -22,7 +22,7 @@ const workExperience = [
     title: 'Technology Counselor',
     company: 'Emagination Computer Camps',
     date: 'Summer 2016',
-    description: 'Taught basic programming skills to campers age 8-17. Advanced topics included linked list implementation, recursion. Taught and supervised mixed ability groups.',
+    description: 'Taught basic programming skills to campers age 8-17 using Python and Java. Advanced topics included linked list implementation, recursion. Taught and supervised mixed ability groups.',
   },
   {
     title: 'TA: Computer Science II',
