@@ -10,7 +10,7 @@ const workExperience = [
     company: '杏树林 (Apricot Forest)',
     date: 'Summer 2017',
     description: `Interned for Beijing-based company that produces content management systems for Chinese physicians. Designed and prototyped database display table with column search. Set up unit testing environment for project's single file Vue compnents. Refactored various pages in client website.
-                  Technologies used: VueJS, ElementIO`,
+    Technologies used: VueJS, ElementIO`,
   },
   {
     title: 'TA: Data Structures and Algorithms',
