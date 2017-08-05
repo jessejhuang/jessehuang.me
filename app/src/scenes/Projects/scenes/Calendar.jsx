@@ -17,9 +17,9 @@ const Calendar = () => {
   return (
     <div style={style}>
       <WorkInfo job={projects.Calendar} style={{ whiteSpace: 'pre-wrap' }} />
-      <a href="http://jessehuang.me/calendar">Website </a>
+      <a href="https://jessehuang.me/calendar">Website </a>
       <a href="https://github.com/jessejhuang/calendar">GitHub</a>
-      <iframe style={frameStyle} title="project"src="http://jessehuang.me/calendar">
+      <iframe style={frameStyle} title="project"src="https://jessehuang.me/calendar">
         <p>Your browser does not support iframes.</p>
       </iframe>
     </div>
