@@ -19,9 +19,6 @@ const Chatroom = () => {
       <WorkInfo job={projects.Chatroom} style={{ whiteSpace: 'pre-wrap' }} />
       <a href="https://jessehuang.me:3456/chatroom.html">Website </a>
       <a href="https://github.com/jessejhuang/chatroom">GitHub</a>
-      <iframe style={frameStyle} title="project" src="http://jessehuang.me:3456/chatroom.html">
-        <p>Your browser does not support iframes.</p>
-      </iframe>
     </div>
   );
 };
