@@ -19,17 +19,37 @@ const projects = {
     description: 'For my Rapid Prototyping final project, I made a joke website for my friend and then-TA, Chiraag. It was a simple image hosting, site akin to imgur, that also allowed post commenters to add images. This project was my first experience working with a modern web framework, Ruby on Rails. Going in I didn’t know a lick of Ruby, but I had a lot of fun figuring everything out.',
   },
   raPlus: {
-    title: 'raPlus',
+    title: 'RAplus',
     company: `Teammates: Justin Guyton, Vishruth Reddy, Danny Weiner
-      Technologies: Flask Python, PostgreSQL, Jinja, Materialize, Less`,
+              Technologies: Flask Python, PostgreSQL, Jinja, Materialize, Less`,
     date: 'January 2017 - May 2017',
-    description: `As Resident Advisors, two of our duties are logging floor events, and recording 1 on 1 meetings with our residents. Three of my fellow programmer-RAs and I wanted a way to efficiently do that, so we prototyped this content management system and called it raPlus. I implemented user sessions and user permissions with Flask-login and Flask-Principal, respectively, and contributed to data display.
+    description: `As Resident Advisors, two of our duties are logging floor events, and recording 1 on 1 meetings with our residents. Three of my fellow programmer-RAs and I wanted a way to efficiently do that, so we prototyped this content management system and called it RAplus. I implemented user sessions and user permissions with Flask-login and Flask-Principal, respectively, and contributed to data display.
                   This project was my first true team effort, and working with three other people on a sizable application was a great experience. Their successes and obstacles were my successes and obstacles. I learned and grew so much, and I’d like to think I helped some of my teammates do the same.
                   Take a look around!\n
                   Example email: example@example.com
-                  Password: example
-
-    `,
+                  Password: example`,
+  },
+  SmartFan: {
+    title: 'Bluetooth Low Energy SmartFan with Temperature Sensor',
+    company: 'Technologies: Redbear Duo-RMMW, Micro Servo, Cordova, PhoneGap, Google Charts API',
+    date: 'April 2017',
+    description: `SmartFan model created for Internet of Things course. Redbear Duo had sensor to collect temperature data and a Micro Servo to simulate a fan. The Redbear Duo would send temperature data to a PhoneGap app, which was then graphed using the Google Charts API. The SmartFan was interfaced and controlled through the PhoneGap Cordova app.
+    Two Settings: Smart Mode and Manual Mode
+    - In Smart Mode, the fan will automatically turn on if the room temperature rises above a specific value, which the user can set via the app.
+    - In manual mode, the fan can be turned on or off independent of the temperature of the room.`,
+  },
+  Movie: {
+    title: 'Movie Search App',
+    company: 'Technologies: Swift, OMDB API, FMDatabase',
+    date: 'February 2017 - March 2017',
+    description: `Movie search iPhone application that displays basic movie information (Title, poster, plot, rating, year, etc). Users could save movies queried through the OMDB API in an FM Database, and view saved movies in a separate favorites tab.
+                  Note: This app was developed before the OMDB API was made private. Usage now requires becoming a patron of the API.`,
+  },
+  Pet: {
+    title: 'Virtual Pet App',
+    company: 'Technologies: Swift',
+    date: 'February 2017 - March 2017',
+    description: 'foo',
   },
 };
 export default projects;

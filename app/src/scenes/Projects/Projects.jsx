@@ -7,6 +7,8 @@ import Calendar from './scenes/Calendar';
 import Chatroom from './scenes/Chatroom';
 import Wikapadia from './scenes/Wikapadia';
 import RaPlus from './scenes/RaPlus';
+import SmartFan from './scenes/SmartFan';
+import Swift from './scenes/swift/Swift';
 
 const style = {
   margin: '0.5em 0',
@@ -51,8 +53,14 @@ const Projects = () => {
             <Tab label="Wikapadia" style={buttonStyle}>
               <Wikapadia />
             </Tab>
-            <Tab label="raPlus" style={buttonStyle}>
+            <Tab label="RAplus" style={buttonStyle}>
               <RaPlus />
+            </Tab>
+            <Tab label="BLE SmartFan" style={buttonStyle}>
+              <SmartFan />
+            </Tab>
+            <Tab label="iPhone Apps" style={buttonStyle}>
+              <Swift />
             </Tab>
           </Tabs>
         </Paper>
