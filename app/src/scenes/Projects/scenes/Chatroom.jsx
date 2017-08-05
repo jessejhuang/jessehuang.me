@@ -8,12 +8,6 @@ const Chatroom = () => {
     fontSize: '18px',
     textAlign: 'right',
   };
-  const frameStyle = {
-    backgroundColor: 'white',
-    minHeight: '90vh',
-    width: '100%',
-    marginTop: '2%',
-  };
   return (
     <div style={style}>
       <WorkInfo job={projects.Chatroom} style={{ whiteSpace: 'pre-wrap' }} />
