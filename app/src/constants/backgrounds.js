@@ -2,6 +2,7 @@ import GrandSlam from '../images/grand_slam.jpg';
 import Bio from '../images/bio.jpg';
 import Lake from '../images/jiuzhaigoulake.jpg';
 import Code from '../images/code_screenshot.png';
+import Workflow from '../images/workflow.png';
 
 const backgrounds = {
   home: {
@@ -9,7 +10,7 @@ const backgrounds = {
     darkness: 0.3,
   },
   about: {
-    url: Code,
+    url: Workflow,
     darkness: 0.8,
   },
   experience: {

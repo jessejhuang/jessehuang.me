@@ -7,7 +7,7 @@ import { List, ListItem } from 'material-ui/List';
 import Paper from 'material-ui/Paper';
 import Home from '../scenes/Home';
 import About from '../scenes/About';
-import Projects from '../scenes/Projects';
+import Projects from '../scenes/Projects/Projects';
 import Contact from '../scenes/Contact';
 import Experience from '../scenes/Experience';
 

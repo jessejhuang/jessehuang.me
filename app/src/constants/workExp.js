@@ -10,7 +10,7 @@ const workExperience = [
     company: '杏树林 (Apricot Forest)',
     date: 'Summer 2017',
     description: `Interned for Beijing-based company that produces content management systems for Chinese physicians. Designed and prototyped database display table with column search. Set up unit testing environment for project's single file Vue compnents. Refactored various pages in client website.
-                  Technologies used: VueJS, ElementIO`,
+    Technologies used: VueJS, ElementIO`,
   },
   {
     title: 'TA: Data Structures and Algorithms',
@@ -22,7 +22,7 @@ const workExperience = [
     title: 'Technology Counselor',
     company: 'Emagination Computer Camps',
     date: 'Summer 2016',
-    description: 'Taught basic programming skills to campers age 8-17. Advanced topics included linked list implementation, recursion. Taught and supervised mixed ability groups.',
+    description: 'Taught basic programming skills to campers age 8-17 using Python and Java. Advanced topics included linked list implementation, recursion. Taught and supervised mixed ability groups.',
   },
   {
     title: 'TA: Computer Science II',
