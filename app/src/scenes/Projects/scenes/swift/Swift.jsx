@@ -2,7 +2,10 @@ import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 import { List } from 'material-ui/List';
 import Paper from 'material-ui/Paper';
+import Almanacc from './Almanacc';
 import Movie from './Movie';
+import Drawing from './Drawing';
+import Pet from './Pet';
 
 const Swift = () => {
   const subhead = {
@@ -16,7 +19,10 @@ const Swift = () => {
         <Paper style={{ paddingTop: '2%', color: '#CCCCCC', backgroundColor: 'rgb(60,60,60)' }}>
           iPhone Apps
           <List>
+            <Almanacc />
             <Movie />
+            <Drawing />
+            <Pet />
           </List>
         </Paper>
       </Col>

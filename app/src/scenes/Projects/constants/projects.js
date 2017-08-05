@@ -38,6 +38,13 @@ const projects = {
     - In Smart Mode, the fan will automatically turn on if the room temperature rises above a specific value, which the user can set via the app.
     - In manual mode, the fan can be turned on or off independent of the temperature of the room.`,
   },
+  Almanacc: {
+    title: 'Almanacc',
+    company: `Teammates: Jeffrey Gu, Rahi Shah, Jonathan Shieh
+              Technologies: Swift, Firebase, Facebook API, Google Maps API`,
+    date: 'April 2017',
+    description: 'Almanacc is an alumni connection application for IOS. It uses the Facebook API to pull friends\' locations. Users can search for specific cities, which will have lists of friends that are currently in that city. Almanacc also features a simple newsfeed, so users are notified whenever a friend changes their location or workplace. All location and work information is stored using Firebase.',
+  },
   Movie: {
     title: 'Movie Search App',
     company: 'Technologies: Swift, OMDB API, FMDatabase',
@@ -45,11 +52,17 @@ const projects = {
     description: `Movie search iPhone application that displays basic movie information (Title, poster, plot, rating, year, etc). Users could save movies queried through the OMDB API in an FM Database, and view saved movies in a separate favorites tab.
                   Note: This app was developed before the OMDB API was made private. Usage now requires becoming a patron of the API.`,
   },
+  Draw: {
+    title: 'Drawing App',
+    company: 'Technologies: Swift',
+    date: 'February 2017',
+    description: 'Simple drawing app. Users can draw continuous lines with varying color, thickness and opacity. They can undo drawn lines and clear the screen. (Image below also features the extent of my drawing skills)',
+  },
   Pet: {
     title: 'Virtual Pet App',
     company: 'Technologies: Swift',
     date: 'February 2017 - March 2017',
-    description: 'foo',
+    description: 'Play with 5 different Virtual pets! This app was created with a focus on proper constraints to work across iOS devices, and on MacOS.',
   },
 };
 export default projects;

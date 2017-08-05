@@ -44,20 +44,20 @@ const Projects = () => {
           Projects
           <Divider />
           <Tabs style={tabStyle} inkBarStyle={{ backgroundColor: 'black' }} tabItemContainerStyle={tabHead}>
+            <Tab label="RAplus" style={buttonStyle}>
+              <RaPlus />
+            </Tab>
             <Tab label="Calendar" style={buttonStyle}>
               <Calendar />
+            </Tab>
+            <Tab label="BLE SmartFan" style={buttonStyle}>
+              <SmartFan />
             </Tab>
             <Tab label="Chatroom" style={buttonStyle}>
               <Chatroom />
             </Tab>
             <Tab label="Wikapadia" style={buttonStyle}>
               <Wikapadia />
-            </Tab>
-            <Tab label="RAplus" style={buttonStyle}>
-              <RaPlus />
-            </Tab>
-            <Tab label="BLE SmartFan" style={buttonStyle}>
-              <SmartFan />
             </Tab>
             <Tab label="iPhone Apps" style={buttonStyle}>
               <Swift />
