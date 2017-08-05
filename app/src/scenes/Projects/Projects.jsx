@@ -6,6 +6,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import Calendar from './scenes/Calendar';
 import Chatroom from './scenes/Chatroom';
 import Wikapadia from './scenes/Wikapadia';
+import RaPlus from './scenes/RaPlus';
 
 const style = {
   margin: '0.5em 0',
@@ -49,6 +50,9 @@ const Projects = () => {
             </Tab>
             <Tab label="Wikapadia" style={buttonStyle}>
               <Wikapadia />
+            </Tab>
+            <Tab label="raPlus" style={buttonStyle}>
+              <RaPlus />
             </Tab>
           </Tabs>
         </Paper>
