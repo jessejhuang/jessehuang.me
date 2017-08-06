@@ -8,10 +8,11 @@ const Calendar = () => {
     fontSize: '18px',
     textAlign: 'right',
   };
+
   return (
     <div style={style}>
       <WorkInfo job={projects.Calendar} style={{ whiteSpace: 'pre-wrap' }} />
-      <a href="https://jessehuang.me/calendar">Website </a>
+      <a href="https://github.com/jessejhuang/calendar">GitHub</a>
     </div>
   );
 };
