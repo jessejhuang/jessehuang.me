@@ -2,7 +2,7 @@ const workExperience = [
   {
     title: 'TA: Rapid Prototype Development and Creative Programming',
     company: 'Washington University in St. Louis',
-    date: 'August 2017 - Present',
+    date: 'August 2017 - December 2017',
     description: 'Teaching Assistant for Rapid Prototype Development and Creative Programming. This course provides a comprehensive introduction to modern web development technologies and practices. Course topics include Apache setup and deployment on an Amazon EC2 instance, PHP, MySQL, and modern Javascript technologies such as Angular, Node, and SocketIO.',
   },
   {
