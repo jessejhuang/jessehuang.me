@@ -16,7 +16,7 @@ const workExperience = [
     title: 'TA: Data Structures and Algorithms',
     company: 'Washington University in St. Louis',
     date: 'January 2017 - Present',
-    description: 'Instructed, graded exams for Data Structures and Algorithms course. Explained course topics to groups of 4 to 6 students. Course topics include asymtotic complexity, recurrences and master theorem, priority queues, binary trees, red-black trees, shortest path, merge sort, and hashing.',
+    description: 'Appointed Lead TA in January 2018. Additional responsibilities include managing a section of 11 TAs, serving as a resource for other TAs. Instructed, graded exams for Data Structures and Algorithms course. Explained course topics to groups of 4 to 6 students. Course topics include asymtotic complexity, recurrences and master theorem, priority queues, binary trees, red-black trees, shortest path, merge sort, and hashing.',
   },
   {
     title: 'Technology Counselor',
