@@ -1,9 +1,9 @@
 const workExperience = [
   {
-    title: 'TA: Rapid Prototype Development and Creative Programming',
+    title: 'TA: Data Structures and Algorithms',
     company: 'Washington University in St. Louis',
-    date: 'August 2017 - December 2017',
-    description: 'Teaching Assistant for Rapid Prototype Development and Creative Programming. This course provides a comprehensive introduction to modern web development technologies and practices. Course topics include Apache setup and deployment on an Amazon EC2 instance, PHP, MySQL, and modern Javascript technologies such as Angular, Node, and SocketIO.',
+    date: 'January 2017 - Present',
+    description: 'Appointed Lead TA in January 2018. Additional responsibilities include managing a section of 11 TAs, serving as a resource for other TAs. Instructed, graded exams for Data Structures and Algorithms course. Explained course topics to groups of 4 to 6 students. Course topics include asymptotic complexity, recurrences and master theorem, priority queues, binary trees, red-black trees, shortest path, merge sort, and hashing.',
   },
   {
     title: 'Front-end Development Intern',
@@ -13,10 +13,10 @@ const workExperience = [
     Technologies used: VueJS, ElementIO`,
   },
   {
-    title: 'TA: Data Structures and Algorithms',
+    title: 'TA: Rapid Prototype Development and Creative Programming',
     company: 'Washington University in St. Louis',
-    date: 'January 2017 - Present',
-    description: 'Appointed Lead TA in January 2018. Additional responsibilities include managing a section of 11 TAs, serving as a resource for other TAs. Instructed, graded exams for Data Structures and Algorithms course. Explained course topics to groups of 4 to 6 students. Course topics include asymtotic complexity, recurrences and master theorem, priority queues, binary trees, red-black trees, shortest path, merge sort, and hashing.',
+    date: 'August 2017 - December 2017',
+    description: 'Teaching Assistant for Rapid Prototype Development and Creative Programming. This course provides a comprehensive introduction to modern web development technologies and practices. Course topics include Apache setup and deployment on an Amazon EC2 instance, PHP, MySQL, and modern Javascript technologies such as Angular, Node, and SocketIO.',
   },
   {
     title: 'Technology Counselor',
